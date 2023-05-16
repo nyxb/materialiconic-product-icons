@@ -17,7 +17,6 @@
   "engines": {
     "vscode": "^1.53.0"
   },
-  "main": "./dist/index.cjs",
   "scripts": {
     "start": "dynot ./src/index.ts",
     "build": "dynot ./src/index.ts",

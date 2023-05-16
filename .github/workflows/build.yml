@@ -1,4 +1,4 @@
-name: Build
+name: 🧱 Build
 
 on: [push, pull_request]
 
@@ -8,19 +8,15 @@ jobs:
     name: Build
 
     steps:
-      - name: Checkout 🛎️
+      - name: 🛎️ Checkout
         uses: actions/checkout@v2
-      - name: Setup Node.js ⚙️
+      - name: ⚙️ Setup Node.js
         uses: actions/setup-node@v2
         with:
           node-version: "lts/*"
           registry-url: 'https://registry.npmjs.org'
-      - name: Setup pnpm 🌐
-        uses: pnpm/action-setup@v2
-        with:
-          version: latest
-      - name: Install node_modules 📦
-        run: pnpm install --frozen-lockfile
-      - name: Build 🚀
+      - name: 📦 Install node_modules
+        run: npm ci
+      - name: 🚀 Build 
         run: |
-          pnpm run build
+          npm run build

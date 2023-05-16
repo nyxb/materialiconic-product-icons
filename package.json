@@ -1,0 +1,84 @@
+{
+  "name": "materialiconic-product-icons",
+  "displayName": "MaterialIconic Product Icons",
+  "description": "🎨 🖌️ Product Icon Theme featuring Material Icons for VS Code.",
+  "version": "0.0.1",
+  "license": "MIT",
+  "publisher": "nyxb",
+  "author": {
+    "name": "Dennis Ollhoff",
+    "email": "contact@nyxb.xyz",
+    "url": "https://💻nyxb.ws"
+  },
+  "funding": "https://github.com/sponsors/nyxb",
+  "sponsor": {
+    "url": "https://github.com/sponsors/nyxb"
+  },
+  "engines": {
+    "vscode": "^1.53.0"
+  },
+  "main": "./dist/index.cjs",
+  "scripts": {
+    "start": "dynot ./src/index.ts",
+    "build": "dynot ./src/index.ts",
+    "lint": "eslint --ext .ts .",
+    "lint:fix": "eslint --ext .ts . --fix",
+    "preview": "dynot ./src/scripts/preview/index.ts",
+    "changelog": "nyxlx changelogen@latest --output",
+    "preversion": "nyxr preview && git add images/preview.png",
+    "version": "nyxr changelog && git add CHANGELOG.md"
+  },
+  "homepage": "https://github.com/nyxblabs/materialiconic-product-icons/blob/master/README.md",
+  "repository": {
+    "url": "https://github.com/nyxblabs/materialiconic-product-icons.git",
+    "type": "git"
+  },
+  "bugs": {
+    "url": "https://github.com/nyxblabs/materialiconic-product-icons/issues"
+  },
+  "icon": "logo.png",
+  "galleryBanner": {
+    "color": "#1e1e1e",
+    "theme": "dark"
+  },
+  "extensionKind": [
+    "ui",
+    "workspace"
+  ],
+  "capabilities": {
+    "untrustedWorkspaces": {
+      "supported": true
+    },
+    "virtualWorkspaces": true
+  },
+  "categories": [
+    "Themes"
+  ],
+  "keywords": [
+    "icons",
+    "theme",
+    "material",
+    "icon-theme",
+    "product-icon-theme",
+    "customization"
+  ],
+  "contributes": {
+    "productIconThemes": [
+      {
+        "id": "materialiconic-product-icons",
+        "label": "MaterialIconic Product Icons",
+        "path": "./theme/materialiconic.product-icon-theme.json"
+      }
+    ]
+  },
+  "devDependencies": {
+    "@nyxb/eslint-config": "^0.0.53",
+    "buildkarium": "^0.0.2",
+    "consolji": "^0.1.4",
+    "dynot": "^0.1.8",
+    "puppeteer": "^20.2.1",
+    "ts-node": "^10.9.1",
+    "typescript": "^5.0.4",
+    "webfont": "^11.2.26"
+  }
+}

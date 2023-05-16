@@ -37,6 +37,7 @@ jobs:
         run: |
           pnpm install --frozen-lockfile
           pnpm install --global @vscode/vsce
+          pnpm run vscode:prepublish
       - name: Update version ↗
         run: |
           git config --global user.name 'nyxb'

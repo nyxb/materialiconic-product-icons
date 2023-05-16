@@ -1,4 +1,4 @@
 node_modules
 *.vsix
-
+dist
 src/scripts/preview/*.html

@@ -19,3 +19,8 @@ package-lock.json
 yarn.lock
 webpack.config.js
 icons/**
+.vscode
+node_modules
+out/
+src/
+tsconfig.json

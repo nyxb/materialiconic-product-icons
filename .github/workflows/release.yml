@@ -27,11 +27,16 @@ jobs:
         with:
           node-version: 'lts/*'
           registry-url: 'https://registry.npmjs.org'
+      - name: ⚙️ Setup PNPM
+        uses: pnpm/action-setup@v2
+        with:
+          version: latest
+      - name: ⚙️ Install @nyxb/nyxi
+        run: pnpm install -g @nyxb/nyxi
       - name: Install node_modules 📦
         run: |
-          npm i
-          npm install --global @nyxb/nyxi
-          npm install --global @vscode/vsce
+          pnpm install --frozen-lockfile
+          pnpm install --global @vscode/vsce
       - name: Update version ↗
         run: |
           git config --global user.name 'nyxb'

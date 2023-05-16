@@ -55,7 +55,7 @@ Take a look at the [contribution guidelines](https://github.com/nyxb/materialico
 [license-href]: https://github.com/nyxblabs/materialiconic-product-icons/blob/main/LICENSE
 
 <!-- Cover -->
-[cover-src]: https://raw.githubusercontent.com/nyxblabs/materialiconic/main/.github/assets/cover-github-materialiconic-product-icons.png
+[cover-src]: https://raw.githubusercontent.com/nyxblabs/materialiconic-product-icons/main/.github/assets/cover-github-materialiconic-product-icons.png
 [cover-href]: https://💻nyxb.ws
 
 <!-- Images -->

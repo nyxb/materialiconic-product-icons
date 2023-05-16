@@ -23,9 +23,9 @@
     "lint": "eslint --ext .ts .",
     "lint:fix": "eslint --ext .ts . --fix",
     "preview": "dynot ./src/scripts/preview/index.ts",
-    "changelog": "nyxlx changelogen@latest --output",
-    "preversion": "nyxr preview && git add images/preview.png",
-    "version": "nyxr changelog && git add CHANGELOG.md"
+    "changelog": "npx changelogen@latest --output",
+    "preversion": "npm run preview && git add images/preview.png",
+    "version": "npm run changelog && git add CHANGELOG.md"
   },
   "homepage": "https://github.com/nyxblabs/materialiconic-product-icons/blob/master/README.md",
   "repository": {

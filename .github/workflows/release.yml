@@ -53,21 +53,21 @@ jobs:
           echo DISPLAY_NAME=$NODE_DISPLAY_NAME >> $GITHUB_ENV
       - name: ⚒️ Build
         run: vsce package --no-dependencies
-      - name: 📌 Push tags
+      - name: Push tags 📌
         run: git push
-      - name: 🔆 Release ${{ env.VERSION }}
+      - name: Release ${{ env.VERSION }} 🔆
         uses: softprops/action-gh-release@v1
         with:
           files: ${{ env.NAME }}-${{ env.VERSION }}.vsix
           tag_name: v${{ env.VERSION }}
           name: ${{ env.DISPLAY_NAME }} v${{ env.VERSION }}
           generate_release_notes: true
-      - name: 🌐 Publish to Open VSX Registry
+      - name: Publish to Open VSX Registry 🌐
         uses: HaaLeo/publish-vscode-extension@v1
         with:
           pat: ${{ secrets.OPEN_VSX_TOKEN }}
           extensionFile: ${{ env.NAME }}-${{ env.VERSION }}.vsix
-      - name: 🌐 Publish to Visual Studio Marketplace
+      - name: Publish to Visual Studio Marketplace 🌐
         uses: HaaLeo/publish-vscode-extension@v1
         with:
           pat: ${{ secrets.VS_MARKETPLACE_TOKEN }}
